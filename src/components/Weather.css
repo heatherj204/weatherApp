@@ -1,0 +1,142 @@
+.weather{
+    place-self: center;
+    padding: 40px;
+    border-radius: 10px;
+    background-image: linear-gradient(45deg, #44adc0, #41ddf1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search-bar{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.search-bar input{
+    height: 50px;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    padding-left: 25px;
+    color: #626262;
+    font-size: 18px;
+}
+
+.search-bar img{
+    width: 50px;
+    padding: 15px;
+    border-radius: 50%;
+    background: #fff;
+    cursor: pointer;
+}
+
+.weather-icon{
+    width: 150px;
+    margin: 30px 0;
+}
+
+.temp{
+    color: #fff;
+    font-size: 80px;
+    line-height: 1
+}
+
+.location{
+    color: #fff;
+    font-size: 40px;
+}
+.descpt{
+    color: #fff;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.weather-details{
+    width: 100%;
+    margin-top: 40px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+}
+
+.weather-details .col{
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 22px;
+}
+.weather-details .col span{
+    display: block;
+    font-size: 16px;
+}
+.weather-details .col img{
+    width: 26px;
+    margin-top: 10px;
+}
+
+
+/* ---------------------
+   Responsive Enhancements
+------------------------ */
+
+/* Small devices (phones < 480px) */
+@media (max-width: 480px) {
+    .temp {
+        font-size: 12vw;
+    }
+
+    .location {
+        font-size: 7vw;
+    }
+
+    .descpt {
+        font-size: 5vw;
+    }
+
+    .search-bar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .search-bar input {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .weather-details {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .weather-details .col {
+        flex: 1 1 100%;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+/* Medium devices (tablets) */
+@media (max-width: 768px) {
+    .temp {
+        font-size: 10vw;
+    }
+
+    .location {
+        font-size: 6vw;
+    }
+
+    .descpt {
+        font-size: 4vw;
+    }
+
+    .search-bar input {
+        font-size: 16px;
+    }
+
+    .weather-details .col {
+        font-size: 16px;
+    }
+}
