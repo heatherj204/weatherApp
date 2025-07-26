@@ -71,10 +71,14 @@ const Weather = () => {
 
     return (
     <div className='weather'>
-        <div className='search-bar'>
-            <input ref={inputRef} type='text' placeholder='Search for a city...' />
-            <img src={search_icon} alt='Search' onClick={()=>search(inputRef.current.value)}/>
-        </div>
+            <form onSubmit={(e) => {
+                e.preventDefault();
+                search(inputRef.current.value)}}>
+            <div className='search-bar'>
+             <input ref={inputRef} type='text' placeholder='Search for a city...' />
+            <img src={search_icon} alt='Search' onClick={()=>search(inputRef.current.value)}/> 
+            </div>
+            </form>
         {weatherData?<>
             {/* <img src="https://openweathermap.org/img/wn/02d@2x.png" alt='icon' className='weather-icon' /> */}
             <div className='weather-icon'>
